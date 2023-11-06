@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat with GPT-3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #chatForm {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #message {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 3px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    #response {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+<h1>Chat with GPT-3</h1>
+<form action="/chat" method="get" id="chatForm">
+  <input type="text" id="message" name="message" placeholder="Enter your message">
+  <button type="submit">Send</button>
+</form>
+<div id="response"></div>
+
+<script>
+  const form = document.getElementById('chatForm');
+  const messageInput = document.getElementById('message');
+  const responseDiv = document.getElementById('response');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const message = messageInput.value;
+
+    // Send the message to the server
+    const response = await fetch(`/chat?message=${message}`);
+    const data = await response.json();
+
+    // Display the response
+    responseDiv.textContent = data[0].message.content;
+  });
+</script>
+</body>
+</html>
