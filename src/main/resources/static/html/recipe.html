@@ -4,19 +4,21 @@
   <title>Start Website</title>
   <link rel="stylesheet" href="../css/recipeCSS.css">
   <script src="../js/navbar.js"  onload="loadNavbar();"></script>
+  <link rel="stylesheet" href="../css/navbar.css">
 </head>
-<body id="body">
+<body>
 
 <nav id="navbar"></nav>
-
-<h1>Chat with GPT-3</h1>
+<div id="body-div">
+<h1>Skriv en ret, du vil have! :-P</h1>
 
 <form id="chatForm">
-  <input type="text" id="message" placeholder="Enter your message">
+  <input type="text" id="message" placeholder="Skriv her">
   <button type="button" onclick="sendMessage()">Send</button>
 </form>
 
 <div id="response"></div>
+</div>
 </body>
 <script src="../js/recipeScript.js"></script>
 </html>

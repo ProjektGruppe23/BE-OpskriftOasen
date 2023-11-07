@@ -1,0 +1,32 @@
+#navbar-template {
+    background-color: rgb(234, 141, 141);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100; /* To ensure it's above other content */
+}
+
+#navbar-template ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the list items within the navbar */
+}
+
+#navbar-template li {
+    display: inline;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#navbar-template a:hover {
+    color: #5b5b5b;
+}
+
+#navbar-template a {
+    text-decoration: none;
+    color: #ffe8e8;
+    font-weight: bold;
+    font-family: Bahnschrift, sans-serif;
+}
