@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ChatGPTController {
 
     @GetMapping("/recipe")
-    public String getRecipe(){
-        return "forward:/recipe.html";
+    public String getRecipe()
+    {
+        return "forward:/html/recipe.html";
     }
 
 }
