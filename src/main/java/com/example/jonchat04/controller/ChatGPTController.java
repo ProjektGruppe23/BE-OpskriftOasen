@@ -19,5 +19,12 @@ public class ChatGPTController {
         return "forward:/html/random.html";
     }
 
+    @GetMapping("/ingredient")
+    public String getIngredient()
+    {
+        return "forward:/html/ingredient.html";
+    }
+
+
 }
 

@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Start Website</title>
+    <link rel="stylesheet" href="../css/ingredientCSS.css">
+    <script src="../js/navbar.js"  onload="loadNavbar();"></script>
 </head>
 <body>
 
+<nav id="navbar"></nav>
+<div id="body-div">
+    <h1>Indtast dine ingredienser! :-P</h1>
+
+    <div id="suggested-ingredients">
+        <div>Mælk</div>
+        <div>Smør</div>
+        <div>Magarine</div>
+        <div>Æg</div>
+        <div>Mel</div>
+        <div>Sukker</div>
+        <div>Olie</div>
+        <div>Balsamico eddike</div>
+        <div>Pasta</div>
+        <div>Ris</div>
+        <div>Aromat</div>
+        <div>Basilikum</div>
+        <div>Kanel</div>
+        <div>Karry</div>
+        <div>Paprika</div>
+        <div>Peber</div>
+        <div>Salt</div>
+        <div>Spidskommen</div>
+    </div>
+
+    <form id="chatForm">
+        <input type="text" id="message" placeholder="Skriv her">
+        <button type="button" onclick="sendMessage('giv%20mig%20max%205%20forskellige%20opskrifter%20ud%20fra%20disse%20ingredienser:')">Send</button>
+    </form>
+
+    <div id="added-ingredients"></div>
+
+    <div id="response-box">
+        <pre id="response" > </pre>
+    </div>
+</div>
 </body>
+<script src="../js/ingredientScript.js"></script>
 </html>
