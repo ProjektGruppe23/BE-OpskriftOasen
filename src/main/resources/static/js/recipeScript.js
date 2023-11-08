@@ -1,5 +1,12 @@
 function sendMessage(queryPrefix) {
-    const message = document.getElementById("message").value;
+    let message;
+    if(document.getElementById("message") === null)
+    {
+        message = "";
+    } else
+    {
+        message = document.getElementById("message").value;
+    }
     const responseElement = document.getElementById("response");
     console.log("Message to send:", message);
     fetch(`http://localhost:8080/chat?message=${queryPrefix}${message}`)
