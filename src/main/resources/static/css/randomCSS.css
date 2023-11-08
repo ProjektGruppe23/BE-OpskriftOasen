@@ -10,14 +10,14 @@ body
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+    padding-bottom: 50px;
+    min-height: 100vh;
 }
 
 h1 {
     text-align: center;
     color : #77C3EC;
+    padding-top: 50px;
 }
 
 #chatForm {
@@ -47,19 +47,20 @@ button {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    min-width: 150px;
-    min-height: 250px;
+    padding: 20px;
+    min-width: 30%;
+
 }
 
 #chatForm, #response-box {
-    max-width: 400px;
+    max-width: 60%;
 }
 
-#response
-{
+#response {
     white-space: pre-wrap;
     min-width: 150px;
     min-height: 250px;
+    font-family: Arial, sans-serif;
 }
 
 #navbar-template
