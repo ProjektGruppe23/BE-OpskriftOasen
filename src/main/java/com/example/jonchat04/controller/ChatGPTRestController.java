@@ -5,7 +5,6 @@ import com.example.jonchat04.dto.ChatResponse;
 import com.example.jonchat04.dto.Choice;
 import com.example.jonchat04.dto.Message;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

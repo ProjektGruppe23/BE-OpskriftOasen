@@ -1,8 +1,8 @@
-function sendMessage() {
+function sendMessage(queryPrefix) {
     const message = document.getElementById("message").value;
     const responseElement = document.getElementById("response");
     console.log("Message to send:", message);
-    fetch(`http://localhost:8080/chat?message=Hvordan%20Laver%20Jeg%20${message}`)
+    fetch(`http://localhost:8080/chat?message=${queryPrefix}${message}`)
         .then(response => response.json())
         .then(data => {
             if (Array.isArray(data) && data.length > 0 && data[0].hasOwnProperty('message')) {
@@ -15,4 +15,5 @@ function sendMessage() {
         })
         .catch(error => console.error("Error:", error));
 }
+
 

@@ -43,15 +43,22 @@ button {
     margin-top: 15px;
 }
 
-#response {
-    text-align: center;
-    padding: 150px 250px;
+#response-box {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    min-height: 250px;
 }
 
-#chatForm, #response {
+#chatForm, #response-box {
     max-width: 400px;
+}
+
+#response
+{
+    white-space: pre-wrap;
+    min-width: 150px;
+    min-height: 250px;
 }
