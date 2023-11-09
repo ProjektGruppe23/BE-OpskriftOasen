@@ -4,6 +4,7 @@
     <title>Start Website</title>
     <link rel="stylesheet" href="../css/ingredientCSS.css">
     <script src="../js/navbar.js"  onload="loadNavbar();"></script>
+
 </head>
 <body>
 
@@ -32,12 +33,14 @@
         <div>Spidskommen</div>
     </div>
 
+    <form id="input-form">
+        <input type="text" id="input-field" placeholder="Skriv her">
+        <button type="button" id="add-button">Tilføj</button>
+    </form>
     <form id="chatForm">
-        <input type="text" id="message" placeholder="Skriv her">
+        <div id="added-ingredients"></div>
         <button type="button" onclick="sendMessage('giv%20mig%20max%205%20forskellige%20opskrifter%20ud%20fra%20disse%20ingredienser:')">Send</button>
     </form>
-
-    <div id="added-ingredients"></div>
 
     <div id="response-box">
         <pre id="response" > </pre>
@@ -45,4 +48,5 @@
 </div>
 </body>
 <script src="../js/ingredientScript.js"></script>
+<script src="../js/recipeScript.js"></script>
 </html>
