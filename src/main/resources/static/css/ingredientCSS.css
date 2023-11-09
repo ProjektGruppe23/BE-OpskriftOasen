@@ -17,6 +17,7 @@ h1 {
     text-align: center;
     color: #a86f6f;
     padding-top: 50px;
+    cursor: default;
 }
 
 #chatForm {
@@ -24,21 +25,39 @@ h1 {
     margin: 20px 0;
 }
 
+#input-form {
+    margin-top: 30px;
+    display: flex; /* Brug Flexbox til at placere elementer side om side */
+    justify-content: center; /* Centrer elementerne i formen */
+    align-items: center; /* Align elements vertically */
+    width: 20%; /* Sæt formens bredde til at fylde containeren */
+}
+
 #input-field {
-    width: 80%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 5px;
 }
 
-button {
+#chat-button {
     background-color: #ed6666;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 50px;
+}
+
+#add-button {
+    margin-left: 25px;
+    margin-right: 5px;
+    background-color: #ed6666;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #response-box {
@@ -62,8 +81,43 @@ button {
     font-family: Arial, sans-serif;
 }
 
-.s-ingredient
-{
+#suggested-ingredients {
     cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    padding: 10px;
 }
 
+#suggested-ingredients > div {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#added-ingredients {
+    cursor: default;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+#added-ingredients > div {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 15px 5px 5px;
+    text-align: left;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

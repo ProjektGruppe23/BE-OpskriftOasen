@@ -5,6 +5,20 @@ const inputIngredient = document.getElementById("input-field");
 
 let num = 0;
 
+function showLoadingPopup() {
+    alert("Tak for dit input, vent venligst 2-5 minutter alt efter netvaerkshastighed for at chat GPT kan trylle noget magisk frem til dig!");
+}
+
+function sendMessage(message) {
+    console.log(`Message sent: ${message}`);
+    // Add the AJAX call or message sending logic here.
+}
+
+function handleChatButtonClick() {
+    showLoadingPopup();
+    sendMessage('giv mig max 5 forskellige opskrifter ud fra disse ingredienser:');
+}
+
 function addInputIngredient()
 {
     const inputText = inputIngredient.value;
@@ -76,5 +90,10 @@ addedIngredientsDiv.addEventListener('click', function (event) {
 });
 
 document.addEventListener("DOMContentLoaded", classNameToSIngredient);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const chatButton = document.getElementById("chat-button");
+    chatButton.addEventListener('click', handleChatButtonClick);
+});
 
 addIngredientButton.addEventListener('click', addInputIngredient);
