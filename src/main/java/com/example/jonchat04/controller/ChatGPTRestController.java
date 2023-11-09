@@ -4,6 +4,7 @@ import com.example.jonchat04.dto.ChatRequest;
 import com.example.jonchat04.dto.ChatResponse;
 import com.example.jonchat04.dto.Choice;
 import com.example.jonchat04.dto.Message;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +19,9 @@ import java.util.List;
 class ChatGPTRestController
 {
     private final WebClient webClient;
+
+   @Value("${OPENAI_API_KEY}")
+    private String apiKey;
 
     public ChatGPTRestController(WebClient.Builder webClientBuilder)
     {
@@ -41,7 +45,7 @@ class ChatGPTRestController
 
         ChatResponse response = webClient.post()
                 .contentType(MediaType.APPLICATION_JSON)
-                .headers(h -> h.setBearerAuth(""))
+                .headers(h -> h.setBearerAuth(apiKey))
                 .bodyValue(chatRequest)
                 .retrieve()
                 .bodyToMono(ChatResponse.class)
