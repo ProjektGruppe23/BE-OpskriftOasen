@@ -51,6 +51,11 @@ class ChatGPTRestController
                 .bodyToMono(ChatResponse.class)
                 .block();
 
+        final double costPerToken = 0.000002;
+        double cost = totalTokenUsed * costPerToken;
+        int totalTokenUsed = response.getUsage().getTotalTokens();
+        System.out.println("Cost for the interaction: '" + message + "' is: $" + String.format("%.4f", cost) + " USD" + " | " + String.format("%.4f", cost*7) + " DKK | " + "Total Tokens Used: " + totalTokenUsed);
+
         List<Choice> lst = response.getChoices();
 
         return lst;
