@@ -1,4 +1,6 @@
 const resultContainer = document.getElementById('resultContainer');
+const apiKey = 'AIzaSyAhzd7FmTaxy_SrvTUT7VsIDZzQ9rzO7Zg';
+const cx = 'b1b23556422bd47ff';
 
 
 function displayImage(imageUrl) {
