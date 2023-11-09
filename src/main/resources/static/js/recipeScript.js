@@ -1,10 +1,22 @@
 function sendMessage(queryPrefix) {
     let message;
-    if(document.getElementById("message") === null)
+    if(document.getElementById('added-ingredients') !== null)
     {
+        console.log('Jeg er i added-ingredients')
+        const ingredientNames = document.getElementsByClassName('ingredient-name')
+        message = [];
+        for(const ingredientName of ingredientNames) {
+            message.push(ingredientName.innerText)
+        }
+    }
+    else if(document.getElementById("message") === null)
+    {
+        console.log('Jeg er i null')
         message = "";
-    } else
+    }
+    else
     {
+        console.log('Jeg er i else')
         message = document.getElementById("message").value;
     }
     const responseElement = document.getElementById("response");
