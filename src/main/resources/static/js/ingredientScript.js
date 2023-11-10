@@ -32,7 +32,7 @@ function addSIngredient(event)
 {
     console.log("I have been clicked");
     const sIngredientText = event.target.innerText;
-    event.target.setAttribute('hidden', true)
+    event.target.style.display = 'none';
     const classNameNum = event.target.className;
     addToIngredientsList(`${sIngredientText} \n`, classNameNum);
 
@@ -70,7 +70,7 @@ function removeIngredient(event) {
 
     if(sIngredients.length > 0) {
         for (const sIngredient of sIngredients) {
-            sIngredient.removeAttribute('hidden');
+            sIngredient.style.display = '';
         }
     }
 
