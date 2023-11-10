@@ -40,7 +40,7 @@ function sendMessage(queryPrefix) {
         .then(data => {
             if (Array.isArray(data) && data.length > 0 && data[0].hasOwnProperty('message')) {
                 const messageContent = data[0].message.content;
-                const firstSentence = messageContent.split('\n')[0];
+                const firstSentence = messageContent.split('\n').slice(0, 3).join('\n');
                 console.log("First sentence:", firstSentence);
                 console.log("Message content:", messageContent);
                 responseElement.innerHTML = messageContent;
